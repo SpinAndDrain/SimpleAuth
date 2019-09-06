@@ -32,10 +32,7 @@ public class MessageDelay {
 	}
 	
 	public boolean canSend() {
-		if(System.currentTimeMillis() >= (this.last + this.delay)) {
-			return true;
-		}
-		return false;
+		return (System.currentTimeMillis() >= (this.last + this.delay));
 	}
 	
 	public void send() {
